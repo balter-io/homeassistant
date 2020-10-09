@@ -29,6 +29,7 @@ google_assistant:
 # Text to speech (google translate)
 tts:
   - platform: google_translate
+    base_url: https://alderleyhassio.duckdns.org:8123
 
 # network speeds
 speedtestdotnet:
