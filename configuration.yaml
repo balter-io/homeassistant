@@ -1,5 +1,5 @@
 
-# Configure a default setup of Home Assistant (frontend, api, etc)
+# configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
 discovery:
@@ -32,7 +32,7 @@ google_assistant:
 # text to speech (google translate)
 tts:
   - platform: google_translate
-    base_url: https://homeassistant.balter.io
+    base_url: https://alderleyhassio.duckdns.org:8123
 
 # network speeds
 speedtestdotnet:
