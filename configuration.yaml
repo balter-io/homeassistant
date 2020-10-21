@@ -58,8 +58,8 @@ proxmoxve:
 
 # influxdb/grafana
 influxdb:
-  username: !secret grafana_username
-  password: !secret grafana_password
+  username: !secret influx_username
+  password: !secret influx_password
 
 # merged entities
 group: !include groups.yaml
