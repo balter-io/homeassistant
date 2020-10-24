@@ -56,6 +56,12 @@ proxmoxve:
           - !secret proxmox_vm_three
           - !secret proxmox_vm_four
 
+# influxdb/grafana
+influxdb:
+  username: !secret influx_username
+  password: !secret influx_password
+
+# merged entities
 group: !include groups.yaml
 automation: !include_dir_merge_list automations/
 script: !include scripts.yaml
