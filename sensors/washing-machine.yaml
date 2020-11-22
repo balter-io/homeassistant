@@ -1,22 +1,22 @@
 - platform: template
   sensors:
     washing_machine_amps:
-      friendly_name_template: "{{ states.switch.washing_machine.name}} Current"
-      value_template: '{{ states.switch.washing_machine.attributes["current_a"] | float }}'
+      friendly_name_template: Washing Machine Current
+      value_template: "{{ states('sensor.washing_machine_amps') | float }}"
       unit_of_measurement: 'A'
     washing_machine_watts:
-      friendly_name_template: "{{ states.switch.washing_machine.name}} Current Consumption"
-      value_template: '{{ states.switch.washing_machine.attributes["current_power_w"] | float }}'
+      friendly_name_template: Washing Machine Watts
+      value_template: "{{ states('sensor.washing_machine_watts') | float }}"
       unit_of_measurement: 'W'
     washing_machine_total_kwh:
-      friendly_name_template: "{{ states.switch.washing_machine.name}} Total Consumption"
-      value_template: '{{ states.switch.washing_machine.attributes["total_energy_kwh"] | float }}'
+      friendly_name_template: Washing Machine Total Consumption
+      value_template: "{{ states('sensor.washing_machine_total_kwh') | float }}"
       unit_of_measurement: 'kWh'
     washing_machine_volts:
-      friendly_name_template: "{{ states.switch.washing_machine.name}} Voltage"
-      value_template: '{{ states.switch.washing_machine.attributes["voltage"] | float }}'
+      friendly_name_template: Washine Machine Voltage
+      value_template: "{{ states('sensor.washing_machine_volts') | float }}"
       unit_of_measurement: 'V'
     washing_machine_today_kwh:
-      friendly_name_template: "{{ states.switch.washing_machine.name}} Today's Consumption"
-      value_template: '{{ states.switch.washing_machine.attributes["today_energy_kwh"] | float }}'
+      friendly_name_template: Washing Machine Consumption Today
+      value_template: "{{ states('sensor.washing_machine_today_kwh') | float }}"
       unit_of_measurement: 'kWh'
