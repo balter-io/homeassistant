@@ -1,0 +1,17 @@
+kitchen_ceiling:
+  name: Kitchen Ceiling Lights
+  entities:
+    - light.kitchen_led_1
+    - light.kitchen_led_2
+    - light.kitchen_led_3
+    - light.kitchen_led_4
+    - light.kitchen_led_5
+    - light.kitchen_led_6
+
+# kitchen_pendants:
+#   name: Kitchen Pendant Lights
+#   entities:
+
+# dining_room:
+#   name: Dining Room Lights
+#   entities:
