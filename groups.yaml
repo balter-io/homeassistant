@@ -15,3 +15,10 @@ kitchen_ceiling:
 # dining_room:
 #   name: Dining Room Lights
 #   entities:
+
+little_foot_station:
+  name: Little Foot Station
+  entities:
+    - media_player.kitchen_hub
+    - media_player.lounge_room_speaker
+    - media_player.master_bedroom_speaker
