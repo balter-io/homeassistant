@@ -8,9 +8,11 @@ kitchen_ceiling:
     - light.kitchen_led_5
     - light.kitchen_led_6
 
-# kitchen_pendants:
-#   name: Kitchen Pendant Lights
-#   entities:
+kitchen_pendants:
+  name: Kitchen Pendant Lights
+  entities:
+    - light.pendant_1
+    - light.pendant_2
 
 # dining_room:
 #   name: Dining Room Lights
