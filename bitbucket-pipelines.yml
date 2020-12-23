@@ -2,7 +2,7 @@ image: homeassistant/home-assistant
 
 pipelines:
   pull-requests:
-    task/*:
+    feature/*:
       - step:
           size: 1x
           script:
