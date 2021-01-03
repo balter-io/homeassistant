@@ -15,8 +15,8 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Deck Irrigation Fallback Hotspot"
-    password: "TV6q8O8BNwbO"
+    ssid: !secret deck_irrigation_fallback_ssid
+    password: !secret deck_irrigation_fallback_password
 
 captive_portal:
 
