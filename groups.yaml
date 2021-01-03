@@ -5,8 +5,6 @@ kitchen_ceiling:
     - light.kitchen_led_2
     - light.kitchen_led_3
     - light.kitchen_led_4
-    - light.kitchen_led_5
-    - light.kitchen_led_6
 
 kitchen_pendants:
   name: Kitchen Pendant Lights
