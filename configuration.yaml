@@ -7,6 +7,9 @@ discovery:
 frontend:
   themes: !include_dir_merge_named themes
 
+homeassistant:
+  customize: !include customize.yaml
+
 # access externally via the internet
 http:
   ssl_certificate: /ssl/fullchain.pem
