@@ -1,26 +1,22 @@
 #!usr/bin/env python3
 from datetime import date, timedelta
+from waste_resources.requests import WasteRequests
 
 
 def collection_type():
-    """ Determine the bins to be emptied on the calculated day. """
-
+    weeks = WasteRequests()
     today = date.today()
+
     if today.weekday() > 3:  # if this thursday has passed, we only care about next week
+        week_starting = today + timedelta((0 - today.weekday()) % 7)  # calculates next monday
 
-        today = today + timedelta((0 - today.weekday()) % 7)
+        for week in weeks.get_week_request()['result']['records']:
+            if week['WEEK_STARTING'] == week_starting.strftime('%d/%m/%Y'):
+                week_zone = week['ZONE']
 
-    # get the iso week number (1-52~53)
-    week_number = today.isocalendar()[1]
+                bin_type = 'Recycling' if weeks.get_day_request()['result']['records'][0]['ZONE'] == week_zone else 'Garden waste'
 
-    if (week_number % 2) == 0:
-        # even weeks(2 & 4) are for garden waste (light green lid bin)
-        bin_type = 'Garden waste'
-    else:
-        # odd weeks(1 & 3) are for recycling (yellow lid bin)
-        bin_type = 'Recycling'
-
-    print(f'Landfill & {bin_type}')
+                print(f'Landfill & {bin_type}')
 
 
 if __name__ == '__main__':
