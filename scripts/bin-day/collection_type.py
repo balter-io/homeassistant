@@ -1,6 +1,6 @@
 #!usr/bin/env python3
 from datetime import date, timedelta
-from waste_resouces.requests import WasteRequests
+from waste_resources.requests import WasteRequests
 
 
 def collection_type():
