@@ -6,6 +6,7 @@ from waste_resources.requests import WasteRequests
 def collection_type():
     weeks = WasteRequests()
     today = date.today()
+    bin_type = None
 
     week_starting = today + timedelta((0 - today.weekday()) % 7)  # calculates next monday
 
@@ -15,7 +16,7 @@ def collection_type():
 
             bin_type = 'Recycling' if weeks.get_day_request()['result']['records'][0]['ZONE'] == week_zone else 'Garden waste'
 
-            print(f'Landfill & {bin_type}')
+    print(f'Landfill & {bin_type}')
 
 
 if __name__ == '__main__':
