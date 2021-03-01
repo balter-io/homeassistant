@@ -2,9 +2,10 @@
 - platform: command_line
   name: Next Bin Collection Date
   scan_interval: 3600
-  command: "python3 /config/scripts/bin-day/collection_date.py"
+  command: "python /config/scripts/bin-day/collection_date.py"
 
 - platform: command_line
   name: Next Bin Collection Type
   scan_interval: 3600
-  command: "python3 /config/scripts/bin-day/collection_type.py"
+  command: "python /config/scripts/bin-day/collection_type.py"
+  command_timeout: 60
