@@ -5,8 +5,6 @@ kitchen_ceiling:
     - light.kitchen_led_2
     - light.kitchen_led_3
     - light.kitchen_led_4
-    - light.kitchen_led_5
-    - light.kitchen_led_6
 
 kitchen_pendants:
   name: Kitchen Pendant Lights
@@ -14,13 +12,10 @@ kitchen_pendants:
     - light.pendant_1
     - light.pendant_2
 
-# dining_room:
-#   name: Dining Room Lights
-#   entities:
-
-little_foot_station:
-  name: Little Foot Station
+dining_room:
+  name: Dining Room Lights
   entities:
-    - media_player.kitchen_hub
-    - media_player.lounge_room_speaker
-    - media_player.master_bedroom_speaker
+    - light.dining_1
+    - light.dining_2
+    - light.dining_3
+    - light.dining_4
