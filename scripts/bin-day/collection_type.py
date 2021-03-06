@@ -22,3 +22,7 @@ def collection_type():
                 week_zone else 'Garden waste'
             print(f'Landfill & {bin_type}')
             break
+
+
+if __name__ == '__main__':
+    collection_type()
