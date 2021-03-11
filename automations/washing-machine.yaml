@@ -1,8 +1,8 @@
 - alias: Set washing machine to running
   trigger:
-    - platform: numeric_state
-      entity_id: sensor.washing_machine_watts
-      above: 3
+    platform: numeric_state
+    entity_id: sensor.washing_machine_watts
+    above: 3
   action:
     - service: input_select.select_option
       data:
@@ -11,28 +11,28 @@
 
 - alias: Set washing machine to complete
   trigger:
-    - platform: numeric_state
-      entity_id: sensor.washing_machine_watts
-      above: 1
-      below: 5
-      for:
-        minutes: 5
+    platform: numeric_state
+    entity_id: sensor.washing_machine_watts
+    above: 1
+    below: 5
+    for:
+      minutes: 5
   action:
     - service: input_select.select_option
       data:
         entity_id: input_select.washing_machine_status
         option: Complete
     - service: tts.google_translate_say
-      entity_id: media_player.little_foot_station
+      entity_id: media_player.little_foot_station_3
       data_template:
         message: "{% if now().hour > 9 or now().hour < 20 %} The washing machine cycle is complete. {% endif %}"
 
 - alias: Set washing machine to idle
   trigger:
-    - platform: template
-      value_template: "{% if is_state('input_select.washing_machine_status', 'Complete') %}true{% endif %}"
-      for:
-        minutes: 5
+    platform: template
+    value_template: "{% if is_state('input_select.washing_machine_status', 'Complete') %}true{% endif %}"
+    for:
+      minutes: 5
   action:
     - service: input_select.select_option
       data:
