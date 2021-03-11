@@ -24,4 +24,5 @@ def pest_control():
         print(date.today().strftime('%d-%b-%Y'))
 
 
-pest_control()
+if __name__ == '__main__':
+    pest_control()
