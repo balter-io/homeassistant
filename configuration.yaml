@@ -64,6 +64,13 @@ influxdb:
   username: !secret influx_username
   password: !secret influx_password
 
+# overseerr
+overseerr:
+  host: !secret overseerr_host
+  port: !secret overseerr_port
+  api_key: !secret overseerr_api_key
+  scan_interval: 600
+
 # merged entities
 group: !include groups.yaml
 automation: !include_dir_merge_list automations/
