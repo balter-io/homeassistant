@@ -37,9 +37,6 @@ tts:
   - platform: google_translate
     base_url: https://alderleyhassio.duckdns.org:8123
 
-# network speeds
-speedtestdotnet:
-
 # weather
 weather:
   - platform: darksky
