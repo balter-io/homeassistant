@@ -1,5 +1,6 @@
 #!usr/bin/env python3
 from datetime import date, timedelta
+from collection_date import collection_date
 from waste_resources.requests import WasteRequests
 
 
@@ -14,9 +15,10 @@ def collection_type():
     bin_type = None
 
     week_starting = today + timedelta((0 - today.weekday()) % 7)  # calculates next monday
+    next_date = today + timedelta((3 - today.weekday()) % 7)  # calculate the next collection date (next thursday)
 
     for week in weeks.get_week_request()['result']['records']:
-        if week['WEEK_STARTING'] == week_starting.strftime('%d/%m/%Y'):
+        if week['WEEK_STARTING'] == week_starting.strftime('%d/%m/%Y') and next_date > today:
             week_zone = week['ZONE']
             bin_type = 'Recycling' if weeks.get_day_request()['result']['records'][0]['ZONE'] == \
                 week_zone else 'Garden waste'
