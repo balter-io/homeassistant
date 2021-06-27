@@ -26,30 +26,30 @@
   unit_of_measurement: "m"
   value_template: '{{ value_json.alt }}'
 
-# owntracks battery levels - pixel3a
+# owntracks battery levels - s21
 - platform: mqtt
-  state_topic: owntracks/mqtt/pixel3a
-  name: Pixel3a Battery
+  state_topic: owntracks/mqtt/s21
+  name: S21 Battery
   unit_of_measurement: "%"
   value_template: '{{ value_json.batt }}'
   device_class: battery
 
-# owntracks connectivity - pixel3a
+# owntracks connectivity - s21
 - platform: mqtt
-  state_topic: owntracks/mqtt/pixel3a
-  name: Pixel3a Connectivity
+  state_topic: owntracks/mqtt/s21
+  name: S21 Connectivity
   value_template: '{{ value_json.conn }}'
 
-# owntracks gps accuracy - pixel3a
+# owntracks gps accuracy - s21
 - platform: mqtt
-  state_topic: owntracks/mqtt/pixel3a
-  name: Pixel3a GPS Accuracy
+  state_topic: owntracks/mqtt/s21
+  name: S21 GPS Accuracy
   unit_of_measurement: "m"
   value_template: '{{ value_json.acc }}'
 
-# owntracks altitude - pixel3a
+# owntracks altitude - s21
 - platform: mqtt
-  state_topic: owntracks/mqtt/pixel3a
-  name: Pixel3a Altitude
+  state_topic: owntracks/mqtt/s21
+  name: S21 Altitude
   unit_of_measurement: "m"
   value_template: '{{ value_json.alt }}'
