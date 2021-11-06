@@ -1,7 +1,7 @@
 import requests
 
 day = 'https://www.data.brisbane.qld.gov.au/data/api/3/action/datastore_search?resource_id=adcb0791-71f1-4b0e-bb6f-b375ac244896&q=529,037'
-week = 'https://www.data.brisbane.qld.gov.au/data/api/3/action/datastore_search?resource_id=c6dbb0b3-1e00-4bb8-8776-aa1b8f1ecfaa'
+week = 'https://www.data.brisbane.qld.gov.au/data/api/3/action/datastore_search?resource_id=c6dbb0b3-1e00-4bb8-8776-aa1b8f1ecfaa&limit=1000'
 
 
 class WasteRequests:
