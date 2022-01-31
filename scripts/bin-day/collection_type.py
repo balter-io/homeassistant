@@ -26,7 +26,7 @@ def collection_type():
             break
 
         if date.today() < collection_date:
-            bin_type = 'Recycling' if weeks.get_day_request()['result']['records'][0]['ZONE'] == \
+            bin_type = 'Recycling' if weeks.get_week_request()['result']['records'][0]['ZONE'] == \
                 zone else 'Garden waste'
             print(f'Landfill and {bin_type}')
             break
