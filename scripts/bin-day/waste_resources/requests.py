@@ -1,12 +1,12 @@
 import requests
-import variables as env
+import os
 
 
 class WasteRequests:
 
     def __init__(self):
-        self.day_request = env.day_api_variable()
-        self.week_request = env.week_api_variable()
+        self.day_request = os.getenv('day')
+        self.week_request = os.getenv('week')
 
     def get_day_request(self):
         return requests.get(self.day_request).json()
