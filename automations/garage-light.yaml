@@ -2,7 +2,7 @@
 - alias: 'Garage Light Automation'
   trigger:
     platform: state
-    entity_id: binary_sensor.garage_door_contact
+    entity_id: binary_sensor.garage_door_zone
     to: 'on'
   condition:
     condition: or

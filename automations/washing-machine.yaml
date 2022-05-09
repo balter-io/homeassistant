@@ -1,7 +1,7 @@
 - alias: Set washing machine to running
   trigger:
     - platform: numeric_state
-      entity_id: sensor.washing_machine_watts
+      entity_id: sensor.washing_machine_mss310_power_w_main_channel
       above: 3
   action:
     - service: input_select.select_option
@@ -12,7 +12,7 @@
 - alias: Set washing machine to complete
   trigger:
     - platform: numeric_state
-      entity_id: sensor.washing_machine_watts
+      entity_id: sensor.washing_machine_mss310_power_w_main_channel
       above: 1
       below: 5
       for:
