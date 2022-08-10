@@ -3,9 +3,9 @@
   trigger:
     platform: state 
     entity_id:
-      - binary_sensor.front_door_motion_sensor_motion
-      - binary_sensor.kitchen_motion_sensor_motion
-      - binary_sensor.office_motion_sensor
+      - binary_sensor.entry_motion_sensor
+      - binary_sensor.kitchen_motion_sensor
+      - binary_sensor.hallway_motion_sensor
     to: 'on'
   condition:
     condition: and
