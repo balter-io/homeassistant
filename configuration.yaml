@@ -21,11 +21,6 @@ http:
 # mobile apps
 mobile_app:
 
-# spotify
-# spotify:
-#   client_id: !secret spotify_client_id
-#   client_secret: !secret spotify_client_secret
-
 # google assistant
 google_assistant:
   project_id: !secret google_assistant_project_id
