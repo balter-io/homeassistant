@@ -49,7 +49,8 @@ proxmoxve:
           - !secret proxmox_vm_one
           - !secret proxmox_vm_two
           - !secret proxmox_vm_three
-          - !secret proxmox_vm_four
+        containers:
+          - !secret proxmox_ct_one
 
 # influxdb/grafana
 influxdb:
