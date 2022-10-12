@@ -3,6 +3,8 @@
     - platform: numeric_state
       entity_id: sensor.washing_machine_mss310_power_w_main_channel
       above: 3
+      for:
+        minutes: 2
   action:
     - service: input_select.select_option
       data:
