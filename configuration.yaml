@@ -46,10 +46,11 @@ proxmoxve:
     nodes:
       - node: !secret proxmox_node
         vms:
-          - !secret proxmox_ct_one
           - !secret proxmox_vm_one
           - !secret proxmox_vm_two
           - !secret proxmox_vm_three
+        containers:
+          - !secret proxmox_ct_one
 
 # influxdb/grafana
 influxdb:
