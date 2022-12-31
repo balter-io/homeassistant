@@ -30,6 +30,7 @@ google_assistant:
 # text to speech (google translate)
 tts:
   - platform: google_translate
+    cache: false
     base_url: https://homeassistant.balter.io
 
 # weather
