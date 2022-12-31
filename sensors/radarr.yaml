@@ -1,6 +1,0 @@
-- platform: radarr
-  api_key: !secret radarr_api_key
-  host: !secret radarr_host
-  monitored_conditions:
-    - upcoming
-  days: 7
