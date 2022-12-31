@@ -30,7 +30,7 @@ google_assistant:
 # text to speech (google translate)
 tts:
   - platform: google_translate
-    base_url: https://alderleyhassio.duckdns.org:8123
+    base_url: https://homeassistant.balter.io
 
 # weather
 weather:
