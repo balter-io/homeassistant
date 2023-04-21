@@ -31,12 +31,7 @@ google_assistant:
 tts:
   - platform: google_translate
     cache: false
-    base_url: https://homeassistant.balter.io
-
-# weather
-weather:
-  - platform: darksky
-    api_key: !secret dark_sky_api
+    base_url: http://192.168.107.15
 
 # proxmox-ve
 proxmoxve:
