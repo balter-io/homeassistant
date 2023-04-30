@@ -2,9 +2,9 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.washing_machine_mss310_power_w_main_channel
-      above: 3
-      for:
-        minutes: 2
+      above: 50
+      # for:
+        # minutes: 2
   action:
     - service: input_select.select_option
       data:
@@ -15,10 +15,10 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.washing_machine_mss310_power_w_main_channel
-      above: 1
+      # above: 1
       below: 5
       for:
-        minutes: 7
+        minutes: 5
   action:
     - service: input_select.select_option
       data:
@@ -34,7 +34,7 @@
     - platform: template
       value_template: "{% if is_state('input_select.washing_machine_status', 'Complete') %}true{% endif %}"
       for:
-        minutes: 5
+        minutes: 2
   action:
     - service: input_select.select_option
       data:
