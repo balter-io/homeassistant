@@ -24,7 +24,7 @@
       data:
         entity_id: input_select.washing_machine_status
         option: Complete
-    - service: tts.google_translate_say
+    - service: tts.speak
       entity_id: media_player.little_foot_station
       data_template:
         message: "{% if now().hour > 9 or now().hour < 20 %} The washing machine cycle is complete. {% endif %}"
