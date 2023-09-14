@@ -1,3 +1,4 @@
+# notification for motion while we are away from home
 - id: '1694683688846'
   alias: Security Alert Automation
   description: ''
@@ -17,7 +18,15 @@
       value_template: '{{ not is_state(''person.tracey'', ''home'') }}'
   action:
   - delay: 00:01:00
-  - service: notify.clicksend
+  # - service: notify.clicksend
+  #   data:
+  #     message: Motion detected while nobody is home
+  #     title: Home Assistant
+  - service: notify.mobile_app_tim_s_s22_ultra
+    data:
+      message: Motion detected while nobody is home
+      title: Home Assistant
+  - service: notify.mobile_app_tracey_s_samsung
     data:
       message: Motion detected while nobody is home
       title: Home Assistant
