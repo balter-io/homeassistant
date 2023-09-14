@@ -25,20 +25,30 @@ google_assistant:
   service_account: !include service-account.json
   report_state: true
 
-# proxmox-ve
-proxmoxve:
-  - host: !secret proxmox_ip
-    username: !secret proxmox_user
-    password: !secret proxmox_pass
-    verify_ssl: false
-    nodes:
-      - node: !secret proxmox_node
-        vms:
-          - !secret proxmox_vm_one
-          - !secret proxmox_vm_two
-          - !secret proxmox_vm_three
-        containers:
-          - !secret proxmox_ct_one
+# text to speach
+tts:
+  - platform: google_translate
+
+# # proxmox-ve
+# proxmoxve:
+#   - host: !secret proxmox_ip
+#     username: !secret proxmox_user
+#     password: !secret proxmox_pass
+#     verify_ssl: false
+#     nodes:
+#       - node: !secret proxmox_node
+#         vms:
+#           - !secret proxmox_vm_one
+#           - !secret proxmox_vm_two
+#           - !secret proxmox_vm_three
+#           - !secret proxmox_vm_four
+#           - !secret proxmox_vm_five
+#         containers:
+#           - !secret proxmox_ct_one
+#           - !secret proxmox_ct_two
+#           - !secret proxmox_ct_three
+#           - !secret proxmox_ct_four
+#           - !secret proxmox_vm_five
 
 # influxdb/grafana
 influxdb:

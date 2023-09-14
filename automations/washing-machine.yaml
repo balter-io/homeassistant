@@ -3,8 +3,6 @@
     - platform: numeric_state
       entity_id: sensor.washing_machine_mss310_power_w_main_channel
       above: 50
-      # for:
-        # minutes: 2
   action:
     - service: input_select.select_option
       data:
@@ -15,7 +13,6 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.washing_machine_mss310_power_w_main_channel
-      # above: 1
       below: 5
       for:
         minutes: 5
@@ -24,9 +21,11 @@
       data:
         entity_id: input_select.washing_machine_status
         option: Complete
-    - service: tts.speak
-      entity_id: media_player.little_foot_station
-      data_template:
+    - service: notify.mobile_app_tim_s_s22_ultra
+      data:
+        message: "{% if now().hour > 9 or now().hour < 20 %} The washing machine cycle is complete. {% endif %}"
+    - service: notify.mobile_app_tracey_s_samsung
+      data:
         message: "{% if now().hour > 9 or now().hour < 20 %} The washing machine cycle is complete. {% endif %}"
 
 - alias: Set washing machine to idle

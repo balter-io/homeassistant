@@ -4,3 +4,8 @@
   username: !secret clicksend_username
   api_key: !secret clicksend_apikey
   recipient: [!secret clicksend_tim, !secret clicksend_tracey]
+
+- platform: tts
+  name: Text to Speech
+  entity_id: tts.google_en_com_au 
+  media_player: media_player.little_foot_station
