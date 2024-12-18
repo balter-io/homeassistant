@@ -13,13 +13,10 @@ def pest_control():
 
         if calendar.isleap(current_year):
             twelve_months = inspection + timedelta(days=366)
-            print(twelve_months.strftime('%d-%b-%Y'))
-            break
         else:
             twelve_months = inspection + timedelta(days=365)
-            print(twelve_months.strftime('%d-%b-%Y'))
-            break
-
+        print(twelve_months.strftime('%d-%b-%Y'))
+        break
     else:
         print(date.today().strftime('%d-%b-%Y'))
 
