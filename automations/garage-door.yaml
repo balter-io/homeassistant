@@ -5,7 +5,7 @@
   - platform: state
     entity_id:
     - binary_sensor.garage_door_sensor_opening
-    to: 'on'
+    to: 'open'
     for:
       hours: 0
       minutes: 30

@@ -5,7 +5,7 @@
   trigger:
   - platform: state
     entity_id:
-    - binary_sensor.garage_door_sensor_accelerometer
+    - binary_sensor.garage_door_sensor_opening
     to: 'on'
   condition:
   - condition: or

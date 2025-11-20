@@ -1,9 +1,0 @@
-# device trackers from the Unfi access point
-- platform: unifi_direct
-  host: !secret ap_host
-  username: !secret ap_user
-  password: !secret ap_pass
-  interval_seconds: 10
-  consider_home: 60
-  new_device_defaults:
-    track_new_devices: true

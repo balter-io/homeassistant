@@ -1,3 +1,0 @@
-# ssl certificate expiry
-- platform: cert_expiry
-  host: !secret synology_fqdn
