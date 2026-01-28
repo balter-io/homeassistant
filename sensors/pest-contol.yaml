@@ -1,5 +1,0 @@
-# reminder: the pest control is due
-- platform: command_line
-  name: Pest Control
-  scan_interval: 3600
-  command: "python3 /config/scripts/reminders/pest-control.py"
